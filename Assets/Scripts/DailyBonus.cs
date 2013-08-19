@@ -29,7 +29,7 @@ public class DailyBonus : MonoBehaviour {
 					if(PlayerPrefs.GetInt("DailyBonusDay") == 5)
 					{
 						DayFive.SendMessage("RequestPlayHavenContent");
-						PlayerPrefs.DeleteKey("DailyBonusDay");
+						PlayerPrefs.SetInt("DailyBonusDay", 1);
 						PlayerPrefs.SetInt("DailyBonusDate", System.DateTime.Now.DayOfYear);
 					}
 					else if(PlayerPrefs.GetInt("DailyBonusDay") == 4)
